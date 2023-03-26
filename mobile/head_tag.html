@@ -1,0 +1,16 @@
+<script type="text/discourse-plugin" version="0.1">
+  // you can use the `api` object here!
+  async function sha1(message) {
+    const msgBuffer = new TextEncoder().encode(message);
+    const hashBuffer = await crypto.subtle.digest('SHA-1', msgBuffer);
+    const hashArray = Array.from(new Uint8Array(hashBuffer));
+    const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+    return hashHex;
+  }
+  const user = api.getCurrentUser();
+  const username = user.username;
+  sha1(username).then((username_sha1) => {
+    const color = username_sha1.slice(0, 6);
+    document.documentElement.style.setProperty('--indicator-color', `#${color}`)
+  })
+</script>

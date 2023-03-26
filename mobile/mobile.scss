@@ -1,0 +1,8 @@
+.names.trigger-user-card:after {
+    content: '';
+    background-color: var(--indicator-color);
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
