@@ -12,7 +12,7 @@
     max-width: 60%;
 }
 
-.names.trigger-user-card .first a{
-    max-width: 95%;
+.names.trigger-user-card .first a {
+    max-width: calc(100% - 13px);
     overflow: hidden;
 }
