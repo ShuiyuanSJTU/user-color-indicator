@@ -1,8 +1,18 @@
-.names.trigger-user-card:after {
+.names.trigger-user-card .first:after {
     content: '';
     background-color: var(--indicator-color);
     display: block;
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
+    margin-left: 5px;
+}
+
+.names.trigger-user-card .first{
+    max-width: 60%;
+}
+
+.names.trigger-user-card .first a{
+    max-width: 95%;
+    overflow: hidden;
 }
